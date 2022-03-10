@@ -5,8 +5,9 @@ import datetime
 import sys
 
 REPO = sys.argv[1]
-TOKEN = sys.argv[2]
-POST_DIR = "source/_posts/"
+POST_DIR = sys.argv[2]
+TOKEN = sys.argv[3]
+
 
 HEADERS = {
     "Accept": "application/vnd.github.v3+json",
