@@ -34,7 +34,8 @@ jobs:
       - name: deploy hexo
         run: |
           # twfb/blog 是部署博客的repo, 同时监测issue
-          python3 deploy_issue.py "twfb/blog" ${{secrets.TOKEN}} > r
+          # source/_post 是被写入的目录
+          python3 deploy_issue.py "twfb/blog" "source/_post" ${{secrets.TOKEN}} > r
           if [[ -s r ]]; then
               git commit -m "$(cat r)" --allow-empty
               git push --set-upstream origin main
