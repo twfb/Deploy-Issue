@@ -20,7 +20,7 @@ all_posts = list(map(lambda x: x.split(".md")[0], os.listdir(POST_DIR)))
 remove_posts = filter(
     lambda x: x["title"] in all_posts,
     requests.get(
-        "https://api.github.com/repos/{}/issues?labels=published".format(REPO),
+        "https://api.github.com/repos/{}/issues?labels=unpublished".format(REPO),
         headers=HEADERS,
     ).json(),
 )
