@@ -17,3 +17,6 @@
 6. 有问题提issue, 看到必解答, 回的慢不要骂我
 
 - 写了个通过get发送post请求, 可以直接在markdown里执行action, 不过会暴露token,私人仓库用还不错, 后来想了想好处也就是不用登录直接调用, 没卵用
+- Issue 参考
+![image](https://user-images.githubusercontent.com/54884944/157815953-0086fd5b-5cba-41c8-82f2-9cbbd5f1b984.png)
+
