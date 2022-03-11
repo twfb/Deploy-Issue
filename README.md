@@ -20,3 +20,4 @@
 - Issue 参考
 ![image](https://user-images.githubusercontent.com/54884944/157815953-0086fd5b-5cba-41c8-82f2-9cbbd5f1b984.png)
 
+- 由于私有仓库action有时间限制, 可以参考这里用公开仓库运行 https://github.com/twfb/PublicActions/blob/main/.github/workflows/blog.yml
