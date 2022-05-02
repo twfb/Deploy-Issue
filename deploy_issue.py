@@ -38,12 +38,15 @@ count = [0, 0, 0]
 
 for post in add_posts:
     file_path = POST_DIR + post["title"] + ".md"
+    new_file = True
+    if os.path.isfile(file_path):
+        new_file = False
     with open(file_path, "w") as f:
         f.write(post["body"])
     os.system("git add " + file_path + " >/dev/null 2>&1")
     if os.popen("git diff " + file_path).read().strip():
         count[2] += 1
-    else:
+    elif new_file:
         count[0] += 1
 
 
