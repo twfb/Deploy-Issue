@@ -20,7 +20,7 @@ all_posts = list(map(lambda x: x.split(".md")[0], os.listdir(POST_DIR)))
 remove_posts = filter(
     lambda x: x["title"] in all_posts,
     requests.get(
-        "https://api.github.com/repos/{}/issues?labels=unpublished".format(REPO),
+        "https://api.github.com/repos/{}/issues?labels=unpublished&state=open".format(REPO),
         headers=HEADERS,
     ).json(),
 )
@@ -28,7 +28,7 @@ remove_posts = filter(
 add_posts = filter(
     lambda x: "unpublished" not in str(x["labels"]),
     requests.get(
-        "https://api.github.com/repos/{}/issues?labels=published".format(REPO),
+        "https://api.github.com/repos/{}/issues?labels=published&state=open".format(REPO),
         headers=HEADERS,
     ).json(),
 )
